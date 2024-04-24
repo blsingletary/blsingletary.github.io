@@ -1,0 +1,1 @@
+All data was made up except for the hotel name which was based off of sunset vista lodge in Costa Rica

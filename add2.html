@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>Add HTML</title>
+<link rel = "stylesheet" href = "css/styles.css">
+</head>
+
+<BODY>
+<h3><a href="index.html" target="_self">Home</a></h3>
+<SCRIPT language=JavaScript type=text/javascript>
+	
+	function validate_form(){
+    	var message ="";
+    	message += checkEmail(document.addform2.email.value);
+    
+    	if (message == ""){
+      		return true;
+    	} else {
+      		alert(message);
+      	return false;
+    	}    
+  	}
+	function checkEmail(itemcontent){
+    	var emailregexp = /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/;
+    
+    	if (!itemcontent.match(/[a-zA-Z]+/)){
+      		return "E-mail address is required!\n";
+    	} else if (itemcontent.match(emailregexp)){
+      		return "";
+    	} else {
+      		return "Invalid E-mail Address!\n";
+    	}
+  	}
+	
+</SCRIPT>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<blockquote>
+  <p><h2>Select Your Room</h2>
+  <form name="addform2" action="add2.php" method=post onSubmit="return validate_form()" >
+    <table width="60%" border="0" cellpadding="3" cellspacing="12">
+    <tr>
+      <td width="130"><strong>Email Address (please input same email) &nbsp;<span class="style1"></span></strong></td>
+      <td><input name="ID" type="text" size="45" maxlength="45" />
+        &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="130"><strong>Location</strong> &nbsp;<span class="style1"></span></td>
+      <td>
+		<select name="location" id="location">
+			<option value="Charlotte">Charlotte</option>
+			<option value="Chicago">Chicago</option>
+			<option value="Greensboro">Greensboro</option>
+			<option value="Houston">Houston</option>
+			<option value="Milwaukee">Milwaukee</option>
+		</select><br></td>
+    </tr>
+    <tr>
+      <td width="130"><strong>Room Number</strong> &nbsp;<span class="style1"></span></td>
+      <td>
+		<select name="gRoom" id="gRoom">
+			<option value="100">100</option>
+			<option value="101">101</option>
+			<option value="102">102</option>
+			<option value="103">103</option>
+			<option value="104">104</option>
+			<option value="105">105</option>
+			<option value="106">106</option>
+			<option value="107">107</option>
+			<option value="108">108</option>
+			<option value="109">109</option>
+			<option value="110">110</option>
+			<option value="200">200</option>
+			<option value="201">201</option>
+			<option value="202">202</option>
+			<option value="203">203</option>
+			<option value="204">204</option>
+			<option value="205">205</option>
+			<option value="206">206</option>
+			<option value="207">207</option>
+			<option value="208">208</option>
+			<option value="209">209</option>
+			<option value="210">210</option>
+			<option value="300">300</option>
+			<option value="301">301</option>
+			<option value="302">302</option>
+			<option value="303">303</option>
+			<option value="304">304</option>
+			<option value="305">305</option>
+			<option value="306">306</option>
+			<option value="307">307</option>
+			<option value="308">308</option>
+			<option value="309">309</option>
+			<option value="310">310</option>
+			<option value="400">400</option>
+			<option value="401">401</option>
+			<option value="402">402</option>
+			<option value="403">403</option>
+			<option value="404">404</option>
+			<option value="405">405</option>
+			<option value="406">406</option>
+			<option value="407">407</option>
+			<option value="408">408</option>
+			<option value="409">409</option>
+			<option value="410">410</option>
+		</select><br></td>
+    </tr>
+    <tr>
+      <td width="130"><p><strong>Number of nights staying</strong> &nbsp;<span class="style1"></span><br /></p>
+        </td>
+      <td><input name="numnightstay" type="text" size="1" maxlength="2" /></td>
+    </tr>
+    <tr>
+      <td width="130">&nbsp;</td>
+      <td><input type="reset" name="Reset" value="Reset" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="Submit" value="Submit" /></td>
+    </tr>
+  </table>
+  </form>
+   </p>
+</blockquote>
+</body>
+</html>
